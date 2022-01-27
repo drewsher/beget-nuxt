@@ -1,0 +1,13 @@
+name: Node CI
+on: push
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: drewsher/beget-deploy@master
+      with:
+        SSH_PRIVATE_KEY: ${{ secrets.key }}
+        REMOTE_HOST: ${{ secrets.host }}
+        REMOTE_USER: ${{ secrets.user }}
+        TARGET: ${{ secrets.target }}
+        STARTUP_FILE: ${{ secrets.file }}
