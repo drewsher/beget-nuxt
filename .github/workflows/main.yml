@@ -10,4 +10,4 @@ jobs:
         REMOTE_HOST: ${{ secrets.host }}
         REMOTE_USER: ${{ secrets.user }}
         TARGET: ${{ secrets.target }}
-        STARTUP_FILE: ${{ secrets.file }}
+        STARTUP_FILE: node_modules/nuxt-start/bin/nuxt-start.js
